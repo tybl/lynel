@@ -11,6 +11,10 @@ FetchContent_Declare(doctest
 FetchContent_MakeAvailable(doctest)
 
 # Define unittests executable target
-add_executable(unit_test main.cpp)
+add_executable(unit_test)
 target_link_libraries(unit_test PRIVATE compiler_settings doctest::doctest)
+target_sources(unit_test
+  PRIVATE
+    lynel/array_vector.cpp
+    main.cpp)
 add_test(NAME unit_test_t COMMAND unit_test)
