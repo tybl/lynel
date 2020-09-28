@@ -4,8 +4,8 @@
 cmake_minimum_required(VERSION 3.14) # FetchContent_MakeAvailable
 
 project(template
-  VERSION 0.0.0
-  DESCRIPTION "Template C++ Project using CMake"
+  VERSION 0.0.1
+  DESCRIPTION "A library for small, dense matrices and vectors"
   LANGUAGES CXX)
 
 option(BUILD_PROJECT_TESTS "Build and run tests as a subproject" OFF)
@@ -17,8 +17,6 @@ endif()
 include(FetchContent)
 include(util/cmake/compiler_settings.cmake)
 include(util/cmake/Linters.cmake)
-
-add_subdirectory(src)
 
 if(IS_ROOT_PROJECT OR BUILD_PROJECT_TESTS)
   add_subdirectory(test)
