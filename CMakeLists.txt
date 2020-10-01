@@ -3,7 +3,7 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.14) # FetchContent_MakeAvailable
 
-project(template
+project(lynel
   VERSION 0.0.1
   DESCRIPTION "A library for small, dense matrices and vectors"
   LANGUAGES CXX)
