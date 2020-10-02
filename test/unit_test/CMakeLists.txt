@@ -12,7 +12,11 @@ FetchContent_MakeAvailable(doctest)
 
 # Define unittests executable target
 add_executable(unit_test)
-target_link_libraries(unit_test PRIVATE compiler_settings doctest::doctest)
+target_link_libraries(unit_test
+  PRIVATE
+    compiler_settings
+    containers
+    doctest::doctest)
 target_sources(unit_test
   PRIVATE
     lynel/array_vector.cpp

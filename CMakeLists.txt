@@ -15,7 +15,13 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   include(util/cmake/compiler_settings.cmake)
   include(util/cmake/Linters.cmake)
 endif()
+
 include(FetchContent)
+FetchContent_Declare(containers
+  GIT_REPOSITORY https://github.com/tybl/containers.git
+  GIT_SHALLOW    TRUE
+  GIT_TAG        origin/main)
+FetchContent_MakeAvailable(containers)
 
 if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) OR BUILD_PROJECT_TESTS)
   add_subdirectory(test)
