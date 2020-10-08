@@ -15,7 +15,7 @@ add_executable(unit_test)
 target_link_libraries(unit_test
   PRIVATE
     compiler_settings
-    containers
+    vodka
     doctest::doctest)
 target_sources(unit_test
   PRIVATE

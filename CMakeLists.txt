@@ -17,11 +17,11 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 endif()
 
 include(FetchContent)
-FetchContent_Declare(containers
-  GIT_REPOSITORY https://github.com/tybl/containers.git
+FetchContent_Declare(libvodka
+  GIT_REPOSITORY https://github.com/tybl/libvodka.git
   GIT_SHALLOW    TRUE
   GIT_TAG        origin/main)
-FetchContent_MakeAvailable(containers)
+FetchContent_MakeAvailable(libvodka)
 
 if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) OR BUILD_PROJECT_TESTS)
   add_subdirectory(test)
